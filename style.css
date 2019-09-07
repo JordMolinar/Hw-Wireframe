@@ -1,70 +1,98 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+	/*box-sizing: border-box;*/
+	text-decoration: none;
 }
 
-.grid {
-    display: grid;
-    grid-template-columns: 1fr 500px 500px 1fr;
-    grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-areas:
-    ". header header ."
-    ". nav nav ."
-    ". section aside ."
-    ". article aside ."
-    ". footer footer .";
-    grid-gap: 30px
+body {
+	width: 960px;
+	background-color: #777;
+	color: #777;
+	font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+	font-size: 18px;
+	margin:0 auto;
+	
 }
 
-.header {
-   grid-area: header;
+.wrapper {
+	text-align: center;
 }
 
-.nav {
-    grid-area: nav;
- }
-
- .section {
-    grid-area: section;
- }
-
-
- .aside {
-    grid-area: aside;
- }
-
- .article {
-    grid-area: article;
- }
-
- .footer {
-     grid-area: footer
- }
-
-    
-.grid div:nth-last-child(even) {
-    background-color: grey;
+header {
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	background-color: #ebebeb;
+	margin:10px 0px 20px 0px;
 }
 
-.grid div:nth-child(odd) {
-    background-color: gray;
+nav {
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	background-color: #ebebeb;
+	margin-bottom: 20px;
 }
 
+.container {
+	margin:10px 0px, 10px, 0px;
+	position: relative;
+}
 
-@media screen and (min-width; 736px) 
-{
-.grid {
-    display: grid;
-    grid-template-columns: 10fr 500px 500px 1fr;
-    grid-template-rows: 10fr 10fr 10fr 10fr;
-    grid-template-areas:
-    ". header header ."
-    ". nav nav ."
-    ". section section ."
-    ". aside aside ."
-    ". article article ."
-    ". footer footer .";
-    grid-gap: 30px
-} 
+section {
+	padding-top: 40px;
+	background-color: #ebebeb;
+	height: 280px;
+	width: 495px;
+	position: relative;
+	margin-right: 10px;
+	
 
+}
 
+article {
+	height: 200px;
+	background-color:#777;
+	color: #ebebeb;
+	float:middle;
+	position: relative;
+	top: 20px;
+	left: 0px;
+	margin: 20px;
+	
+}
+
+article h1 {
+	height:50px;
+	background-color: #ebebeb;
+	color: #777;
+	margin: 50px 20px 10px 20px;
+}
+
+article p {
+	height: 50px;
+	background-color: #ebebeb;
+	color: #777;
+	margin: 10px 20px 10px 20px;
+}
+
+aside {
+	padding-top: 40px;
+	background-color: #ebebeb;
+	height: 280px;
+	width:445px;
+	float:right;
+	position: absolute;
+	right: 0px;
+	top: 0px;
+}
+
+footer {
+	height: 50px;
+	width: 100%;
+	line-height: 50px;
+	position:relative;
+	bottom:0;
+	left:0;
+	background-color: #ebebeb;
+	margin-top: 20px;
+}
